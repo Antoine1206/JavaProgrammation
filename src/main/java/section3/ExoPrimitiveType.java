@@ -1,8 +1,8 @@
 package section3;
 
-public class main {
+public class ExoPrimitiveType {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         /**
          * Intervalle de Valeur Byte
@@ -66,33 +66,33 @@ public class main {
 
 
         boolean isAlien = false;
-        if (isAlien == false){
+        if (isAlien == false) {
             System.out.println("it's not an alien");
         }
 
-        if (isAlien != true){
+        if (isAlien != true) {
             System.out.println("it's still not an alien");
         }
 
         int topScore = 100;
-        if (topScore > 100){
+        if (topScore > 100) {
             System.out.println("pas supérieur à 100");
         } else {
             System.out.println(" supérieur à 100");
         }
 
         int lowScore = 50;
-        if (lowScore > 40 && lowScore <100){    //&& => AND
+        if (lowScore > 40 && lowScore < 100) {    //&& => AND
             System.out.println("Score moyen obtenu");
         }
 
         int score = 50;
-        if (score > 60 || score <100){    //|| => OU
+        if (score > 60 || score < 100) {    //|| => OU
             System.out.println("score respectant une seule condition");
         }
         boolean isCar = true;
         boolean wasCar = isCar ? true : false;
-        if (wasCar){
+        if (wasCar) {
             System.out.println("wasar is true");
         }
 
@@ -107,7 +107,7 @@ public class main {
 
         boolean variable5 = (variable4 == 0) ? true : false;
         System.out.println(variable5);
-        if (!variable5){
+        if (!variable5) {
             System.out.println("got some remainders");
         }
 
