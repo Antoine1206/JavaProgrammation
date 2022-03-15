@@ -3,7 +3,7 @@ package section9;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player implements ISaveable {
+public class Joueur implements ISaveable {
 
 
     private String name;
@@ -13,7 +13,7 @@ public class Player implements ISaveable {
     private int strength;
 
 
-    public Player(String name, int hitPoints, int strength) {
+    public Joueur(String name, int hitPoints, int strength) {
         this.name = name;
         this.weapon = ("sword");
         this.hitPoints = hitPoints;
