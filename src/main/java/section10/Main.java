@@ -6,7 +6,7 @@ import java.util.Collections;
 public class Main {
 
     public static void main(String[] args) {
-	    FootballPlayer joe = new FootballPlayer("Joe");
+/*	    FootballPlayer joe = new FootballPlayer("Joe");
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
@@ -45,15 +45,35 @@ public class Main {
         System.out.println(adelaideCrows.compareTo(melbourne));
         System.out.println(adelaideCrows.compareTo(hawthorn));
         System.out.println(hawthorn.compareTo(adelaideCrows));
-        System.out.println(melbourne.compareTo(fremantle));
+        System.out.println(melbourne.compareTo(fremantle));*/
+
+
+        League<Team<FootballPlayer>> footballLeague = new League<>("AFL");
+        Team<FootballPlayer> adelaideCrows = new Team<>("Adelaide Crows");
+        Team<FootballPlayer> melbourne = new Team<>("Melbourne");
+        Team<FootballPlayer> hawthorn= new Team<>("Hawthorn");
+        Team<FootballPlayer> fremantle= new Team<>("Fremantle");
+
+        hawthorn.matchResult(fremantle, 1, 0);
+        hawthorn.matchResult(adelaideCrows, 3, 8);
+
+        adelaideCrows.matchResult(fremantle, 2, 1);
+
+        footballLeague.addTeam(adelaideCrows);
+        footballLeague.addTeam(melbourne);
+        footballLeague.addTeam(hawthorn);
+        footballLeague.addTeam(fremantle);
+
+        footballLeague.showLeagueTable();
 
     }
 
+
     //Create a generic class to implement a league table for a sport.
-    // The class should allow teals to be added to the list, and store
+    // The class should allow teams to be added to the list, and store
     // a list of teams that belong to the league.
 
-    //Your class should have a method to print out he teams in order,
+    //Your class should have a method to print out the teams in order,
     //with the team at the top of the league printed first
 
     //Only teams of the same type should be added to any particular

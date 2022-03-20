@@ -42,10 +42,10 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
 
         String message;
 
-        if(ourScore > theirScore) {
+        if (ourScore > theirScore) {
             won++;
             message = " beat ";
-        } else if(ourScore == theirScore) {
+        } else if (ourScore == theirScore) {
             tied++;
             message = " drew with ";
 
@@ -54,7 +54,7 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
             message = " lost to ";
         }
         played++;
-        if(opponent != null) {
+        if (opponent != null) {
             System.out.println(this.getName() + message + opponent.getName());
             opponent.matchResult(null, theirScore, ourScore);
         }
@@ -63,6 +63,7 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
     public int ranking() {
         return (won * 2) + tied;
     }
+
 
     @Override
     public int compareTo(Team<T> team) {
@@ -74,11 +75,20 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
             return 0;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "name='" + name + '\'' +
+                ", played=" + played +
+                ", won=" + won +
+                ", lost=" + lost +
+                ", tied=" + tied +
+                ", members=" + members +
+                '}';
+    }
+
 }
-
-
-
-
 
 
 
